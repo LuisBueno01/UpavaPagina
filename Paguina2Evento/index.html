@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diversidad Cultural de Veracruz | UPAV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #00695c;
+            --primary-dark: #004d40;
+            --accent: #C1272D;
+            --light-bg: #f9f9f9;
+            --text: #333;
+            --white: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin: 0;
+            font-family: 'Cinzel', serif;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 15px auto 0;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            background-color: var(--primary-dark);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 0;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-family: 'Cinzel', serif;
+            margin-top: 30px;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 25px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .region-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .region-list a {
+            display: block;
+            padding: 12px;
+            background: #e8f5f2;
+            border-radius: 8px;
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .region-list a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mapa-interactivo {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .mapa-interactivo iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .contactos a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contactos a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .galeria, .region-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Diversidad Cultural de Veracruz</h1>
+        <p>Un viaje por las tradiciones, sabores, lenguas, danzas y colores que hacen de Veracruz un tesoro cultural único en México.</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#diversidad">Diversidad Cultural</a>
+        <a href="#evento-upav">Evento UPAV 2025</a>
+        <a href="#eventos-veracruz">Eventos Culturales</a>
+        <a href="#regiones">Regiones</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main id="inicio">
+        <img src="img/DiversidadCultural.jpg" alt="Paisaje cultural de Veracruz" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <h2>Bienvenido a Veracruz: Tierra de Encuentros Culturales</h2>
+        
+        <p><em>“Veracruz no es solo un lugar: es un encuentro de mundos, ritmos, sabores y memorias que se entrelazan en cada rincón.”</em></p>
+
+        <p>
+            Veracruz ha sido, desde tiempos prehispánicos, puerta de encuentro entre culturas. Fue cuna de la civilización olmeca —considerada la “madre de las culturas mesoamericanas”— y testigo del primer contacto entre Europa, África y América. Esta confluencia histórica ha forjado una identidad cultural profundamente diversa, viva y en constante diálogo.
+        </p>
+
+        <p>
+            Reconocemos y honramos a los pueblos originarios de Veracruz —náhuas, totonacos, teenek (huastecos), popolucas, mazatecos, chinantecos, ixcatecos y otomíes—, así como a las comunidades afroveracruzanas, cuya presencia y resistencia han enriquecido la música, la lengua, la espiritualidad y la gastronomía del estado.
+        </p>
+
+        <h3>Este sitio es un espacio para ti</h3>
+        <p>
+            Esta plataforma digital es un espacio vivo para:
+        </p>
+        <ul>
+            <li>Conocer las 10 regiones culturales de Veracruz.</li>
+            <li>Explorar sus tradiciones, lenguas, vestimentas y cosmovisiones.</li>
+            <li>Acceder a recursos educativos sobre patrimonio inmaterial.</li>
+            <li>Participar en el evento anual de la UPAV desde cualquier parte del estado.</li>
+        </ul>
+
+        <div class="participa-box">
+            <strong>¡Tú también formas parte de esta historia!</strong><br>
+            Comparte tus fotos, relatos familiares, recetas tradicionales o grabaciones de música local. Tu voz enriquece el mosaico cultural de Veracruz.
+        </div>
+    </main>
+
+    <section id="diversidad">
+        <main>
+            <h2>¿Por qué es importante la diversidad cultural?</h2>
+            <p>
+                La diversidad cultural no solo enriquece la identidad colectiva, sino que también:
+            </p>
+            <ul>
+                <li>Fomenta el respeto y la tolerancia entre comunidades.</li>
+                <li>Preserva saberes ancestrales en medicina, agricultura y artesanía.</li>
+                <li>Impulsa el turismo cultural sostenible.</li>
+                <li>Fortalece la cohesión social y la innovación.</li>
+            </ul>
+            <p>
+                En Veracruz, celebrar esta diversidad es honrar a quienes han habitado estas tierras por siglos y asegurar que sus voces sigan vivas en las nuevas generaciones.
+            </p>
+        </main>
+    </section>
+
+    <section id="evento-upav">
+        <main>
+            <h2>Evento Cultural Anual de la UPAV: “Regiones de Veracruz”</h2>
+            <p>
+                Desde hace más de una década, la <strong>Universidad Popular Autónoma de Veracruz (UPAV)</strong>, a través de su Consejo Estudiantil, organiza el evento cultural <em>“Regiones de Veracruz”</em>. Este proyecto busca:
+            </p>
+            <ul>
+                <li>Visibilizar las 10 regiones culturales del estado.</li>
+                <li>Promover la participación estudiantil en la preservación del patrimonio.</li>
+                <li>Crear espacios de diálogo intercultural entre comunidades.</li>
+                <li>Exhibir danzas, gastronomía, artesanías y narrativas locales.</li>
+            </ul>
+            <p>
+En la Edicion 2025 del evento contamos con la participacion y organizacion de los maestros y el consejo estudiantil. </p> El evento de este año está dedicado a la promoción y celebración de las festividades, culturas, expresiones musicales, danzas tradicionales, gastronomía ancestral e historia de los pueblos que conforman la riqueza cultural de Veracruz. </p>
+
+A través de actividades académicas, artísticas y comunitarias, se busca visibilizar, valorar y preservar el patrimonio inmaterial de las comunidades originarias, afrodescendientes y mestizas del estado, fortaleciendo así la identidad veracruzana y fomentando el respeto por la diversidad cultural            </p>
+
+ <ul>
+                <li>Ferias culturales regionales</li>
+                <li>Concursos de poesía en lenguas originarias</li>
+                <li>Talleres de son jarocho, huapango y danza tradicional</li>
+                <li>Exposiciones fotográficas y gastronómicas</li>
+                <li>Charlas con sabios comunitarios y portadores de tradición</li>
+            </ul>
+            
+
+</main>
+    </section>
+
+    <section id="eventos-veracruz">
+        
+        <main>
+            <img src="img/diversidad1.jpeg" alt="Paisaje cultural de Veracruz" style="width: 100%; max-width: 800px; height: auto; border-radius: 80px; margin-bottom: 25px; box-shadow: 0 7px 10px rgba(3,0,4,1.1);">
+            <h2>Eventos Culturales Emblemáticos de Veracruz</h2>
+            <ul>
+                <li><strong>Carnaval de Veracruz</strong>: Uno de los más antiguos y grandes de América Latina, con desfiles, comparsas y música en vivo.</li>
+                <li><strong>Fiesta de la Candelaria (Tlacotalpan)</strong>: Patrimonio Cultural Inmaterial de la UNESCO, con danzas, velas y ofrendas.</li>
+                <li><strong>Danza de los Voladores (Papantla)</strong>: Ritual totonaco declarado Patrimonio de la Humanidad.</li>
+                <li><strong>Festival del Son Jarocho (Alvarado)</strong>: Celebración de la música tradicional veracruzana.</li>
+                <li><strong>Feria del Café (Coatepec)</strong>: Reconoce la importancia del café en la cultura de las Altas Montañas.</li>
+            </ul>
+        </main>
+    </section>
+
+    <section id="regiones">
+        <main>
+            <h2>Las 10 Regiones Culturales de Veracruz</h2>
+            <ul class="region-list">
+                <li><a href="sotavento.html">Región Sotavento</a></li>
+                <li><a href="huasteca-alta.html">Huasteca Alta</a></li>
+                <li><a href="huasteca-baja.html">Huasteca Baja</a></li>
+                <li><a href="totonacapan.html">Totonacapan</a></li>
+                <li><a href="nautla.html">Nautla</a></li>
+                <li><a href="capital.html">Capital</a></li>
+                <li><a href="montanas.html">Altas Montañas</a></li>
+                <li><a href="papaloapan.html">Papaloapan</a></li>
+                <li><a href="tuxtlas.html">Tuxtlas</a></li>
+                <li><a href="olmeca.html">Olmeca</a></li>
+            </ul>
+
+            <div class="mapa-interactivo">
+                <h2>Explora las Regiones de Veracruz</h2>
+                <iframe
+                    title="Mapa interactivo: Regiones de Veracruz"
+                    src="https://view.genially.com/65c7e3ccb02aff00154e9b78"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </main>
+    </section>
+
+    <section id="reconocimiento">
+    <main>
+        <h2>Reconocimiento a los Pueblos Originarios y Afrodescendientes</h2>
+        <p>
+            <img src="img/pueblosoriginarios.jpg" alt="Paisaje cultural de Veracruz" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            Veracruz es, desde tiempos inmemoriales, tierra de pueblos originarios cuyas raíces se hunden en la historia más antigua de Mesoamérica. Son herederos de civilizaciones como la olmeca —considerada la “madre de las culturas mesoamericanas”— y guardianes de lenguas, cosmovisiones, saberes agrícolas, medicinales y espirituales que han resistido siglos de transformaciones.
+        </p>
+        <p>
+            Actualmente, en el estado coexisten <strong>ocho pueblos indígenas</strong>:
+        </p>
+        <ul>
+            <li><strong>Náhuas</strong>, presentes en las regiones de las Altas Montañas, Totonacapan, Nautla y Papaloapan.</li>
+            <li><strong>Totonacos</strong>, en Totonacapan y parte de la Huasteca Alta.</li>
+            <li><strong>Teenek (Huastecos)</strong>, en la Huasteca Alta y Baja.</li>
+            <li><strong>Popolucas</strong>, en la región de Los Tuxtlas y el sur del estado.</li>
+            <li><strong>Mazatecos, Chinantecos, Ixcatecos y Otomíes</strong>, en zonas limítrofes con Oaxaca y Puebla, especialmente en las montañas del sureste veracruzano.</li>
+        </ul>
+        <p>
+            Junto a ellos, las <strong>comunidades afroveracruzanas</strong> —descendientes de africanos traídos durante la colonia— han dejado una huella indeleble en la identidad del estado. Su legado es especialmente visible en la <strong>música</strong> (como el son jarocho y el fandango), la <strong>gastronomía</strong>, la <strong>lengua</strong> y las <strong>festividades populares</strong>, particularmente en la región de Costa Chica, Sotavento y la zona de Papaloapan.
+        </p>
+        <p>
+            La <strong>participación activa</strong> de estos pueblos en la vida cultural, social y espiritual de Veracruz es fundamental. Son ellos quienes mantienen vivas las ceremonias del Volador, los cantos en náhuatl o totonaco, las danzas de los Negritos, las ofrendas a la tierra, las técnicas ancestrales de tejido, alfarería y cultivo del maíz. Su presencia no es solo histórica: es <strong>presente, dinámica y transformadora</strong>.
+        </p>
+        <p>
+            En cada una de las <strong>10 regiones culturales de Veracruz</strong>, su influencia se manifiesta de manera distinta pero igualmente profunda:
+        </p>
+        <ul>
+            <li>En <strong>Totonacapan</strong>, el ritual de los Voladores y la siembra de vainilla.</li>
+            <li>En la <strong>Huasteca</strong>, los sones huastecos y la poesía en teenek.</li>
+            <li>En <strong>Papaloapan</strong>, la fusión afroindígena en la música y la cocina.</li>
+            <li>En <strong>Los Tuxtlas</strong>, las ceremonias agrícolas y el uso ritual del tabaco.</li>
+            <li>En la <strong>Capital</strong> y <strong>Sotavento</strong>, el fandango jarocho como espacio comunitario de encuentro.</li>
+        </ul>
+        <div class="participa-box">
+            <p>
+                <strong>Reconocerlos no es solo un acto de justicia histórica, sino un compromiso con la diversidad, la memoria colectiva y el futuro cultural de Veracruz.</strong><br>
+            </p>  Hoy, desde la Universidad Popular Autónoma de Veracruz (UPAV) y su Consejo Estudiantil 2025–2028, rendimos homenaje a su resistencia, creatividad y generosidad al compartir sus saberes con las nuevas generaciones.
+            </p>
+        </div>
+    </main>
+</section>
+
+
+    <section id="contacto">
+        <main>
+            <h2>Conctatos</h2>
+            <div class="contactos">
+                <p>📘 <a href="https://www.facebook.com/profile.php?id=100063709381818" target="_blank" rel="noopener">Facebook Oficial UPAV </a></p>
+                <p>🏫 <a href="https://www.upav.edu.mx" target="_blank" rel="noopener">Sitio Oficial de la UPAV</a></p>
+                <p>✉️ <a href="mailto:sugerencias@upav.edu.mx">Envía tus sugerencias</a></p>
+                <img src="img/Logo del Consejo Estudiantil UPAV.png" alt="Fandango comunitario en Tlacotalpan, región del Sotavento" class="banner" width="200" >   <img src="img/logoupav.png" alt="Fandango comunitario en Tlacotalpan, región del Sotavento" class="banner" width="250">
+            </div>
+        </main>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Universidad Popular Autónoma de Veracruz (UPAV)<br>
+        Consejo Estudiantil 2025–2028 | Proyecto: Diversidad Cultural de Veracruz</p>
+    </footer>
+
+</body>
+</html>
