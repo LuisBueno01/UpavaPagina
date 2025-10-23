@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Descubre la Región de Nautla en Veracruz: tierra de montañas, ríos cristalinos, café y tradiciones mestizas donde se entrelazan lo indígena, lo español y lo popular." />
+    <title>Nautla – Donde la Montaña Abraza al Río | Veracruz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #5d4037;       /* Marrón tierra */
+            --primary-light: #a1887f; /* Beige cálido */
+            --primary-dark: #3e2723;  /* Marrón oscuro */
+            --accent: #8d6e63;        /* Tonos intermedios de tierra */
+            --bg-light: #fffaf3;
+            --text: #222;
+            --white: #fff;
+            --shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            text-align: center;
+            padding: 1.8rem 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background-color: #d7ccc8;
+            text-align: center;
+            padding: 0.8rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            margin: 0 0.7rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--primary);
+            text-shadow: 0 0 4px rgba(93, 64, 55, 0.3);
+            outline: none;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 1.8rem;
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-family: 'Cinzel', serif;
+            margin: 2rem 0 1.2rem;
+            font-size: 1.85rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.4rem;
+        }
+
+        p, ul {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight {
+            background-color: #f5f0e6;
+            padding: 1.3rem;
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            margin: 1.6rem 0;
+        }
+
+        /* Galería */
+        #galeria {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #bcaaa4;
+        }
+
+        #galeria h2 {
+            text-align: center;
+        }
+
+        #fileInput {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid #a1887f;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #galleryContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 1rem;
+        }
+
+        #galleryContainer img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease;
+        }
+
+        #galleryContainer img:hover {
+            transform: scale(1.03);
+        }
+
+        #clearGallery {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.6rem 1.4rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        #clearGallery:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.4rem 0;
+            }
+            #galleryContainer img {
+                width: 100%;
+                max-width: 300px;
+            }
+            main {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link" style="position:absolute; top:-40px; left:10px; background:var(--primary); color:white; padding:8px; text-decoration:none; border-radius:4px;" 
+       onfocus="this.style.top='10px'" onblur="this.style.top='-40px'">
+        Ir al contenido principal
+    </a>
+
+    <header>
+        <h1>Región de Nautla</h1>
+        <p>Donde la montaña abraza al río y las tradiciones se tejen en cada rincón</p>
+    </header>
+
+    <nav aria-label="Navegación regional">
+        <a href="index.html">Inicio</a>
+        <a href="huasteca-alta.html">Huasteca Alta</a>
+        <a href="huasteca-baja.html">Huasteca Baja</a>
+        <a href="totonaca.html">Totonaca</a>
+        <a href="capital.html">Capital</a>
+        <a href="montanas.html">Montañas</a>
+        <a href="papaloapan.html">Papaloapan</a>
+        <a href="tuxtlas.html">Tuxtlas</a>
+        <a href="olmeca.html">Olmeca</a>
+        <a href="sotavento.html">Sotavento</a>
+    </nav>
+
+    <main id="main-content">
+        <section>
+            <h2>Historia</h2>
+            <p>
+                La región de Nautla ha sido habitada desde tiempos prehispánicos por pueblos <strong>totonacos y nahuas</strong>, quienes aprovechaban sus fértiles valles y abundantes ríos. Durante la época colonial, su ubicación estratégica —entre la costa del Golfo y las sierras centrales de Veracruz— la convirtió en un corredor comercial y militar clave.
+            </p>
+            <p>
+                En el siglo XIX, Nautla fue escenario de importantes eventos históricos: durante la <strong>Intervención Francesa</strong>, sirvió como refugio para fuerzas republicanas, y en la <strong>Revolución Mexicana</strong>, fue zona de operaciones de grupos zapatistas y constitucionalistas. Además, es cuna del expresidente de México <strong>Miguel Alemán Valdés (1946–1952)</strong>, nacido en Sayula —municipio cercano con fuerte influencia nautleca.
+            </p>
+
+            <h2>Ubicación Geográfica</h2>
+            <div class="highlight">
+                <p>
+                    La región de Nautla se ubica en el <strong>centro-norte del estado de Veracruz</strong>, en la transición ecológica y cultural entre la Huasteca y la Sierra Central. Incluye municipios como <strong>Nautla, Misantla, Martínez de la Torre, Acatlán, Tlapacoyan, Jilotepec y Landero y Coss</strong>.
+                </p>
+                <p>
+                    Su relieve es variado: cerros suaves, valles profundos, cañones y planicies aluviales. Está atravesada por importantes ríos como el <strong>Nautla, Bobos, Misantla y Acatlán</strong>, que forman una red hídrica vital para la región y para el abastecimiento del norte de Veracruz.
+                </p>
+            </div>
+
+            <h2>Cultura</h2>
+            <p>
+                La identidad nautleca es profundamente <strong>mestiza</strong>, resultado del encuentro entre raíces indígenas, influencias españolas y expresiones populares del siglo XIX y XX. Se conservan danzas rituales como <strong>“Los Negritos”</strong> (de origen afroindígena) y <strong>“Los Santiagos”</strong> (de raíz hispánica), que simbolizan la lucha entre el bien y el mal.
+            </p>
+            <p>
+                La música es central: la <strong>banda tradicional</strong> y los <strong>tríos románticos</strong> animan fiestas y serenatas. La artesanía incluye cestería de palma, cerámica bruñida y bordados con motivos florales. Las <strong>leyendas locales</strong> —como la del <em>nahual</em> que protege los manantiales o el “cabeza de hacha” que vaga en los cerros— reflejan una cosmovisión donde lo natural y lo espiritual se entrelazan.
+            </p>
+
+            <h2>Importancia Económica y Ambiental</h2>
+            <p>
+                Nautla es una de las regiones agrícolas más productivas del norte de Veracruz. Sus cultivos principales incluyen:
+            </p>
+            <ul>
+                <li><strong>Café de altura</strong> (en zonas como Misantla y Tlapacoyan)</li>
+                <li><strong>Caña de azúcar, plátano, cítricos y mango</strong></li>
+                <li><strong>Maíz y frijol</strong> en sistemas tradicionales de milpa</li>
+            </ul>
+            <p>
+                Además, su riqueza hídrica la convierte en un <strong>“corazón acuífero”</strong>: los ríos alimentan acueductos urbanos y presas hidroeléctricas. Los bosques mesófilos y selvas altas son refugio de biodiversidad y reguladores del clima local.
+            </p>
+
+            <h2>Tradiciones Comunitarias</h2>
+            <p>
+                Las fiestas patronales son momentos de cohesión social, donde se combinan lo sagrado y lo festivo. Destacan las <strong>peregrinaciones a santuarios</strong> como el de la Virgen de Guadalupe en Nautla o el Señor del Calvario en Misantla. Los <strong>altares de Día de Muertos</strong> incluyen flores silvestres, frutas de la temporada, café recién tostado y copitas de aguardiente.
+            </p>
+            <p>
+                El <strong>huapango serrano</strong> —con violín, huapanguera y jarana— y la música de banda son el alma de las bodas, bautizos y cumpleaños. La transmisión oral sigue siendo clave para preservar canciones, refranes y relatos históricos.
+            </p>
+
+            <h2>Festividades Importantes</h2>
+            <ul>
+                <li><strong>Fiesta de San Miguel Arcángel (29 de septiembre)</strong> en Nautla: procesión, danzas, feria artesanal y juegos mecánicos.</li>
+                <li><strong>Feria del Café (Misantla)</strong>: celebración de la cosecha con cataciones, exposiciones y conciertos.</li>
+                <li><strong>Carnaval de Martínez de la Torre</strong>: uno de los más antiguos del norte veracruzano, con comparsas y sátira social.</li>
+                <li><strong>Posadas y villancicos tradicionales (diciembre)</strong>: con instrumentos de viento y coros comunitarios.</li>
+            </ul>
+
+            <h2>Gastronomía Típica</h2>
+            <p>
+                La cocina nautleca combina ingredientes de montaña, río y huerto:
+            </p>
+            <ul>
+                <li><strong>Mole de olla</strong>: guiso tradicional con chiles, verduras y carne de res.</li>
+                <li><strong>Tamales de ceniza</strong>: envueltos en hoja de plátano y cocidos con ceniza de leña.</li>
+                <li><strong>Barbacoa de res</strong>, horneada en hoyo con pencas de maguey.</li>
+                <li><strong>Pescado de río en salsa verde</strong> (con tomate, cilantro y chile serrano).</li>
+                <li><strong>Empanadas de plátano macho</strong>, fritas o al horno.</li>
+                <li><strong>Bebidas</strong>: atole agrio, café de olla con canela, y aguardiente artesanal de caña.</li>
+            </ul>
+
+            <h2>Flora</h2>
+            <p>
+                La región alberga ecosistemas diversos gracias a su altitud y humedad:
+            </p>
+            <ul>
+                <li><strong>Bosques mesófilos de montaña</strong> (nubosos): con liquidámbar, tilo, orquídeas y helechos gigantes.</li>
+                <li><strong>Selvas altas perennifolias</strong>: ceiba, ramón, guanacaste.</li>
+                <li><strong>Vegetación ribereña</strong>: sauces, ahuejotes y cañas.</li>
+                <li><strong>Árboles frutales</strong>: mamey, chicozapote, aguacate y naranjo.</li>
+            </ul>
+
+            <h2>Fauna</h2>
+            <p>
+                Entre las especies que habitan la región se encuentran:
+            </p>
+            <ul>
+                <li><strong>Mamíferos</strong>: venado cola blanca, mapache, tigrillo, armadillo y mono araña (en zonas remotas).</li>
+                <li><strong>Aves</strong>: quetzal (en zonas altas y húmedas), colibríes, guacamaya verde, pájaro cantor y águila real.</li>
+                <li><strong>Acuáticas</strong>: truchas de río, cangrejos de río y ranas de cristal.</li>
+                <li><strong>Reptiles</strong>: iguana verde, serpientes de coral y boas.</li>
+            </ul>
+
+            <h2>Datos Interesantes</h2>
+            <ul>
+                <li>📍 El nombre <strong>“Nautla”</strong> proviene del náhuatl <em>Nāuh-tla</em>, que significa “<strong>lugar de cuatro caminos</strong>”, en alusión a su posición estratégica.</li>
+                <li>💧 Es conocida como la <strong>“cuna del agua”</strong> por sus innumerables manantiales, arroyos y ríos cristalinos que nacen en sus cerros.</li>
+                <li>☕ El <strong>café de Misantla</strong> es reconocido por su sabor suave y aroma floral, cultivado bajo sombra de árboles nativos.</li>
+                <li>🏞️ La región forma parte del <strong>Corredor Biológico Mesoamericano</strong> y alberga áreas prioritarias para la conservación.</li>
+                <li>🏛️ En 2023, comunidades de Nautla iniciaron procesos de <strong>declaratoria de Patrimonio Cultural Inmaterial</strong> para sus danzas y festividades.</li>
+            </ul>
+        </section>
+
+        <section id="galeria" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Galería Cultural</h2>
+            <p>Sube tus propias fotos: paisajes, festividades, artesanías o retratos de la vida cotidiana en Nautla.</p>
+            <input type="file" id="fileInput" accept="image/*" multiple aria-label="Seleccionar imágenes para la galería" />
+            <button id="clearGallery" aria-label="Limpiar galería">Limpiar Galería</button>
+            <div id="galleryContainer" role="region" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const galleryContainer = document.getElementById('galleryContainer');
+        const clearButton = document.getElementById('clearGallery');
+
+        fileInput.addEventListener('change', (event) => {
+            const files = Array.from(event.target.files);
+            if (files.length === 0) return;
+
+            galleryContainer.innerHTML = '';
+            files.forEach(file => {
+                if (!file.type.match('image/')) return;
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = `Imagen cargada: ${file.name.replace(/\.[^/.]+$/, "")}`;
+                    img.title = file.name;
+                    galleryContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        clearButton.addEventListener('click', () => {
+            galleryContainer.innerHTML = '';
+            fileInput.value = '';
+        });
+    </script>
+</body>
+</html>

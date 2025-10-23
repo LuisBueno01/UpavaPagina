@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explora la riqueza cultural, histórica y natural de la región Totonacapan en Veracruz, México: cuna de El Tajín, la danza de los Voladores y la vainilla." />
+    <title>Totonacapan – Corazón Cultural del Norte de Veracruz</title>
+    <style>
+        :root {
+            --primary: #388e3c;
+            --primary-light: #81c784;
+            --primary-dark: #1b5e20;
+            --bg-light: #fffaf3;
+            --text: #222;
+            --accent: #ffd54f;
+            --shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.7;
+            padding-top: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            margin: 0.3rem 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: #e8f5e9;
+            text-align: center;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            margin: 0 0.6rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 1.5rem;
+        }
+
+        section h2 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 0.4rem;
+            margin-top: 2rem;
+            font-size: 1.6rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Galería */
+        #galeria {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dcedc8;
+        }
+
+        #galeria h2 {
+            text-align: center;
+        }
+
+        #fileInput {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.6rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+        }
+
+        #galleryContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 1rem;
+        }
+
+        #galleryContainer img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease;
+        }
+
+        #galleryContainer img:hover {
+            transform: scale(1.03);
+        }
+
+        #clearGallery {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.6rem 1.2rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #clearGallery:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.4rem 0;
+            }
+            #galleryContainer img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Región Totonacapan</h1>
+        <p>Tierra ancestral de los totonacos, cuna de El Tajín, la danza de los Voladores y la vainilla mexicana</p>
+    </header>
+
+    <nav aria-label="Navegación regional">
+        <a href="index.html">Inicio</a>
+        <a href="huasteca-alta.html">Huasteca Alta</a>
+        <a href="huasteca-baja.html">Huasteca Baja</a>
+        <a href="nautla.html">Nautla</a>
+        <a href="capital.html">Capital</a>
+        <a href="montanas.html">Montañas</a>
+        <a href="papaloapan.html">Papaloapan</a>
+        <a href="tuxtlas.html">Tuxtlas</a>
+        <a href="olmeca.html">Olmeca</a>
+        <a href="sotavento.html">Sotavento</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Historia</h2>
+            <p>El Totonacapan fue el núcleo de una de las civilizaciones mesoamericanas más influyentes: los totonacos. Su apogeo cultural y arquitectónico se dio entre los siglos VII y XII d.C., con El Tajín como su centro ceremonial más importante. Este sitio arqueológico, declarado Patrimonio de la Humanidad por la UNESCO en 1992, destaca por su complejo arquitectónico, incluyendo la famosa Pirámide de los Nichos.</p>
+            <p>Los totonacos resistieron con valentía tanto al expansionismo del Imperio Mexica como a la invasión española. Fueron aliados estratégicos de Hernán Cortés en 1519, aportando fuerzas y conocimientos locales que facilitaron la caída de Tenochtitlán. Sin embargo, tras la conquista, sufrieron procesos de evangelización forzada y pérdida de autonomía, aunque preservaron muchos de sus usos y costumbres.</p>
+
+            <h2>Ubicación Geográfica</h2>
+            <p>La región Totonacapan se localiza en el norte del estado de Veracruz, abarcando aproximadamente 15 municipios, entre los que destacan Papantla, Poza Rica, Cazones de Herrera, Coxquihui, Gutiérrez Zamora, Tecolutla, Espinal, Filomeno Mata y Coatzintla. Limita al norte con la Huasteca Baja, al sur con la región de Nautla, al oeste con el estado de Puebla y al este con el Golfo de México.</p>
+            <p>Su relieve combina llanuras costeras, serranías bajas y cuencas fluviales, con una rica biodiversidad que incluye selvas tropicales perennifolias y manglares en la costa.</p>
+
+            <h2>Cultura</h2>
+            <p>La identidad totonaca se manifiesta en múltiples expresiones culturales. El idioma totonaco —con variantes regionales— es hablado por más de 250,000 personas y está reconocido como lengua nacional en México. La Danza de los Voladores, declarada Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2009, simboliza la conexión entre el cielo, la tierra y los cuatro rumbos del universo.</p>
+            <p>La artesanía incluye cestería de palma, cerámica bruñida, máscaras de madera y tejidos con fibras naturales. La cosmovisión totonaca valora profundamente la armonía con la naturaleza, los ciclos agrícolas y el respeto a los espíritus de los ancestros.</p>
+
+            <h2>Importancia Histórica y Económica</h2>
+            <p>El Totonacapan es la cuna de la vainilla (<em>Vanilla planifolia</em>), una orquídea trepadora domesticada por los totonacos siglos antes de la llegada de los españoles. Hoy en día, sigue siendo una de las zonas productoras más importantes del mundo, aunque enfrenta desafíos por la competencia de la vainilla sintética.</p>
+            <p>Además, la región es un polo turístico clave gracias a El Tajín, las playas vírgenes de Tecolutla y Chachalacas, los festivales culturales y el ecoturismo en sus ríos y cascadas.</p>
+
+            <h2>Tradiciones y Ceremonias</h2>
+            <p>Las comunidades totonacas mantienen vivas ceremonias agrícolas como la siembra y cosecha del maíz, rituales de petición de lluvia y ofrendas a los espíritus de la montaña. La Danza de los Voladores se realiza en fiestas patronales, eventos comunitarios y celebraciones nacionales.</p>
+            <p>La participación comunitaria es fundamental: desde la preparación de altares hasta la organización de danzas, todos los miembros —niños, jóvenes y ancianos— tienen un rol simbólico.</p>
+
+            <h2>Festividades Importantes</h2>
+            <p>El <strong>Festival del Volador y la Vainilla</strong>, celebrado en junio en Papantla, reúne a voladores de distintas regiones de México y el mundo, además de exposiciones de vainilla, gastronomía local y artesanías. El <strong>Carnaval de Papantla</strong> es uno de los más antiguos de Veracruz, con raíces prehispánicas y católicas entrelazadas.</p>
+            <p>Otras celebraciones incluyen la Fiesta de San José (19 de marzo), las posadas con representaciones del nacimiento, y el Día de Muertos, donde los altares incluyen flores de cempasúchil, frutas, tamales y vainilla como ofrenda a los difuntos.</p>
+
+            <h2>Gastronomía Típica</h2>
+            <p>La cocina totonaca se basa en el maíz, el chile, las hierbas silvestres y los productos del mar y la selva. Entre sus platillos emblemáticos están:</p>
+            <ul>
+                <li><strong>Zacahuil</strong>: tamal gigante de hasta 2 metros, envuelto en hojas de plátano y asado en horno de tierra.</li>
+                <li><strong>Tamales de hoja de plátano</strong> con salsa de chile ancho o chipotle.</li>
+                <li><strong>Mole de Xico</strong>: aunque originario de la región de los Tuxtlas, es muy apreciado en zonas limítrofes.</li>
+                <li><strong>Pescado a la talla</strong>: marinado con chiles y asado a las brasas.</li>
+                <li><strong>Bebidas tradicionales</strong>: pozol (maíz fermentado), atole de maíz nuevo y agua de vainilla.</li>
+            </ul>
+            <p>Los postres a menudo incorporan vainilla natural: flan, arroz con leche, nieves artesanales y dulces de leche.</p>
+
+            <h2>Flora</h2>
+            <p>La región alberga ecosistemas diversos: selvas altas perennifolias, manglares, bosques de galería y cafetales sombra. Entre su riqueza vegetal destacan:</p>
+            <ul>
+                <li>Orquídeas nativas (incluyendo la vainilla)</li>
+                <li>Ceiba (<em>Ceiba pentandra</em>), árbol sagrado</li>
+                <li>Guanacaste, ramón y chaca</li>
+                <li>Palmas reales y de coyol</li>
+                <li>Plantas medicinales como el ruda, la hierba del sapo y el oregano poleo</li>
+            </ul>
+
+            <h2>Fauna</h2>
+            <p>El Totonacapan es refugio de especies emblemáticas de Mesoamérica:</p>
+            <ul>
+                <li>Mamíferos: jaguar, mono araña, coatí, ocelote, tigrillo</li>
+                <li>Aves: tucán pico de canoa, quetzal (en zonas altas de la Sierra de Chiconquiaco), garzas, patos silvestres</li>
+                <li>Reptiles y anfibios: iguanas, ranas de cristal, serpientes coralillo</li>
+                <li>En las lagunas costeras: tortugas marinas (como la golfina), cangrejos azules y peces de arrecife</li>
+            </ul>
+
+            <h2>Datos Curiosos</h2>
+            <ul>
+                <li>La palabra “Totonaca” proviene del náhuatl y significa “hombre de tierra caliente” o “gente de la tierra tropical”.</li>
+                <li>El Tajín significa “ciudad de truenos” en lengua totonaca.</li>
+                <li>La vainilla fue tan valiosa en Europa que en el siglo XIX se llamaba “oro negro”.</li>
+                <li>Hoy, más de 250,000 personas se identifican como totonacas, y su lengua se enseña en algunas escuelas indígenas bilingües.</li>
+                <li>Los Voladores realizan 13 vueltas cada uno (52 en total), simbolizando el calendario mesoamericano de 52 años.</li>
+            </ul>
+        </section>
+
+        <section id="galeria" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Galería Cultural</h2>
+            <p>Sube tus propias imágenes para enriquecer esta galería comunitaria.</p>
+            <input type="file" id="fileInput" accept="image/*" multiple aria-label="Seleccionar imágenes para la galería" />
+            <button id="clearGallery" aria-label="Limpiar galería">Limpiar Galería</button>
+            <div id="galleryContainer" role="region" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const galleryContainer = document.getElementById('galleryContainer');
+        const clearButton = document.getElementById('clearGallery');
+
+        fileInput.addEventListener('change', (event) => {
+            const files = Array.from(event.target.files);
+            if (files.length === 0) return;
+
+            files.forEach(file => {
+                if (!file.type.match('image.*')) return;
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = `Imagen cargada: ${file.name}`;
+                    img.title = file.name;
+                    galleryContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        clearButton.addEventListener('click', () => {
+            galleryContainer.innerHTML = '';
+            fileInput.value = ''; // Reset input
+        });
+    </script>
+</body>
+</html>
