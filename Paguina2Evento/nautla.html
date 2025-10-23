@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautla - Diversidad Cultural Veracruzana</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fffaf3;
+            color: #222;
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #5d4037, #a1887f);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #d7ccc8;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #3e2723;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #3e2723;
+            border-bottom: 2px solid #bcaaa4;
+            padding-bottom: 5px;
+        }
+        #galeria input {
+            display: block;
+            margin: 10px auto;
+        }
+        #galleryContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #galleryContainer img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Región de Nautla</h1>
+        <p>Donde la montaña abraza al río y las tradiciones se tejen en cada rincón</p>
+    </header>
+
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="huasteca-alta.html">Huasteca Alta</a>
+        <a href="huasteca-baja.html">Huasteca Baja</a>
+        <a href="totonaca.html">Totonaca</a>
+        <a href="capital.html">Capital</a>
+        <a href="montanas.html">Montañas</a>
+        <a href="papaloapan.html">Papaloapan</a>
+        <a href="tuxtlas.html">Tuxtlas</a>
+        <a href="olmeca.html">Olmeca</a>
+        <a href="sotavento.html">Sotavento</a>
+    </nav>
+
+    <section>
+        <h2>Historia</h2>
+        <p>La región de Nautla ha sido habitada desde tiempos prehispánicos por grupos totonacos y nahuas. Durante la Colonia, se convirtió en un punto estratégico por su ubicación entre la costa y las sierras centrales. En el siglo XIX, fue escenario de batallas durante la Intervención Francesa y la Revolución Mexicana.</p>
+
+        <h2>Ubicación Geográfica</h2>
+        <p>Se localiza en el centro-norte de Veracruz, en la transición entre la Huasteca y la zona montañosa central. Incluye municipios como Nautla, Misantla, Martínez de la Torre, Acatlán y Tlapacoyan. Está rodeada de ríos, cerros y valles fértiles.</p>
+
+        <h2>Cultura</h2>
+        <p>La identidad nautleca se forja en la mezcla de raíces indígenas, españolas y mestizas. Se conservan danzas tradicionales, música de banda y tríos, así como la artesanía en palma y barro. La oralidad y las leyendas locales —como la del “Nahual”— son parte viva de su patrimonio.</p>
+
+        <h2>Importancia</h2>
+        <p>Nautla es una región agrícola clave: produce café, caña de azúcar, plátano y cítricos. Además, su riqueza hídrica (ríos Nautla, Bobos, Misantla) la convierte en una zona vital para el abastecimiento de agua y la generación de energía hidroeléctrica.</p>
+
+        <h2>Tradiciones</h2>
+        <p>Destacan las fiestas patronales con danzas de “Los Negritos” y “Los Santiagos”, la elaboración de altares de muertos con flores silvestres, y las peregrinaciones a santuarios locales. La música de banda y el huapango serrano animan las celebraciones familiares.</p>
+
+        <h2>Festividades Importantes</h2>
+        <p>La Fiesta de San Miguel Arcángel (29 de septiembre) en Nautla reúne a miles de fieles. También se celebran la Feria del Café en Misantla, el Carnaval de Martínez de la Torre y las posadas con villancicos tradicionales en diciembre.</p>
+
+        <h2>Comida Típica</h2>
+        <p>Platillos representativos incluyen el mole de olla, tamales de ceniza, barbacoa de res, pescado de río en verde y empanadas de plátano. Entre las bebidas están el atole agrio, el café de olla y el aguardiente de caña.</p>
+
+        <h2>Flora</h2>
+        <p>La región alberga bosques mesófilos de montaña, selvas altas y vegetación ribereña. Es común encontrar orquídeas, helechos gigantes, liquidámbar, ceiba y árboles frutales como el mamey y el chicozapote.</p>
+
+        <h2>Fauna</h2>
+        <p>Habitan el venado cola blanca, el mapache, el tigrillo, el quetzal (en zonas altas), así como aves como el colibrí, la guacamaya verde y el pájaro cantor. Los ríos son hogar de truchas y cangrejos de río.</p>
+
+        <h2>Datos Interesantes</h2>
+        <p>El nombre “Nautla” proviene del náhuatl *Nauhtla*, que significa “lugar de cuatro caminos”. La región es conocida como “la cuna del agua” por sus numerosos manantiales. Además, fue cuna del general Miguel Alemán Valdés, presidente de México (1946–1952).</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería Cultural</h2>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <div id="galleryContainer"></div>
+    </section>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const galleryContainer = document.getElementById('galleryContainer');
+
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            galleryContainer.innerHTML = '';
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+                    galleryContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+</body>
+</html>

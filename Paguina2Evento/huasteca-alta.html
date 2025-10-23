@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huasteca Alta - Diversidad Cultural Veracruzana</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fefaf5;
+            color: #222;
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #c62828, #ff7043);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #ffe0b2;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #bf360c;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #bf360c;
+            border-bottom: 2px solid #ffcc80;
+            padding-bottom: 5px;
+        }
+        #galeria input {
+            display: block;
+            margin: 10px auto;
+        }
+        #galleryContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #galleryContainer img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Región Huasteca Alta</h1>
+        <p>Riqueza cultural, historia viva y tradiciones milenarias del norte de Veracruz</p>
+    </header>
+
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="huasteca-baja.html">Huasteca Baja</a>
+        <a href="totonaca.html">Totonaca</a>
+        <a href="nautla.html">Nautla</a>
+        <a href="capital.html">Capital</a>
+        <a href="montanas.html">Montañas</a>
+        <a href="papaloapan.html">Papaloapan</a>
+        <a href="tuxtlas.html">Tuxtlas</a>
+        <a href="olmeca.html">Olmeca</a>
+        <a href="sotavento.html">Sotavento</a>
+    </nav>
+
+    <section>
+        <h2>Historia</h2>
+        <p>La Huasteca Alta, ubicada en el norte de Veracruz, fue hogar de la civilización huasteca, un pueblo que floreció antes de la llegada de los mexicas. Su historia se distingue por su arte escultórico, su música ancestral y su resistencia ante las invasiones extranjeras. Durante la Colonia, su territorio fue escenario de rutas comerciales entre el altiplano y el Golfo.</p>
+
+        <h2>Ubicación Geográfica</h2>
+        <p>Comprende municipios como Pánuco, Tantoyuca, Tempoal y Ozuluama. Se ubica al norte del estado, colindando con Tamaulipas y San Luis Potosí. Su paisaje está compuesto por ríos, planicies y montañas bajas que descienden hacia el Golfo de México.</p>
+
+        <h2>Cultura</h2>
+        <p>Predomina la cultura huasteca, con una fuerte presencia de lengua náhuatl y huasteco. La música de son huasteco o huapango, con violín y jarana, es uno de los símbolos más representativos. La vestimenta tradicional, colorida y bordada a mano, aún se usa en festividades locales.</p>
+
+        <h2>Importancia</h2>
+        <p>La región es de gran relevancia histórica, agrícola y cultural. Sus tradiciones, su gastronomía y su arte musical son pilares de la identidad veracruzana. Además, su producción de cítricos y ganadería contribuyen notablemente a la economía del estado.</p>
+
+        <h2>Tradiciones</h2>
+        <p>Destacan las danzas de los voladores, el Xantolo (Día de Muertos huasteco) y las fiestas patronales con música de trío huasteco. La población mantiene rituales antiguos que mezclan elementos prehispánicos y católicos.</p>
+
+        <h2>Festividades Importantes</h2>
+        <p>El Xantolo (1 y 2 de noviembre) es la celebración más grande, donde se honra a los muertos con ofrendas, danzas, comida y música. También son notorias las ferias de Tempoal y Tantoyuca, con desfiles, gastronomía y juegos tradicionales.</p>
+
+        <h2>Comida Típica</h2>
+        <p>Entre sus platillos destacan el zacahuil (tamal gigante), el bocol, enchiladas huastecas, barbacoa de res, caldo de gallina y tamales de frijol. El café y el aguardiente artesanal también forman parte del consumo local.</p>
+
+        <h2>Flora</h2>
+        <p>Predominan especies como ceibas, cedros, zapotes, y una gran variedad de plantas frutales como naranjos, limoneros y plátanos. Los campos agrícolas y huertos familiares son parte del paisaje cotidiano.</p>
+
+        <h2>Fauna</h2>
+        <p>Habitan venados, tejones, armadillos, garzas, tucanes y reptiles propios de las zonas húmedas. Los ríos atraen una diversidad de peces y aves migratorias.</p>
+
+        <h2>Datos Interesantes</h2>
+        <p>La Huasteca Alta es considerada la cuna del huapango veracruzano. En varias comunidades aún se practican rituales agrícolas dedicados al maíz. Además, la región conserva petroglifos prehispánicos y sitios arqueológicos poco explorados.</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería Cultural</h2>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <div id="galleryContainer"></div>
+    </section>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const galleryContainer = document.getElementById('galleryContainer');
+
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            galleryContainer.innerHTML = '';
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+                    galleryContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+</body>
+</html>

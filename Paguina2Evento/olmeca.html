@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Región Olmeca - Diversidad Cultural Veracruzana</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fdf9f5;
+            color: #222;
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #8d6e63, #bcaaa4);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #d7ccc8;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #5d4037;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #5d4037;
+            border-bottom: 2px solid #bcaaa4;
+            padding-bottom: 5px;
+        }
+        #galeria input {
+            display: block;
+            margin: 10px auto;
+        }
+        #galleryContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #galleryContainer img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Región Olmeca</h1>
+        <p>Cuna de la primera civilización de América</p>
+    </header>
+
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="huasteca-alta.html">Huasteca Alta</a>
+        <a href="huasteca-baja.html">Huasteca Baja</a>
+        <a href="totonaca.html">Totonaca</a>
+        <a href="nautla.html">Nautla</a>
+        <a href="capital.html">Capital</a>
+        <a href="montanas.html">Montañas</a>
+        <a href="papaloapan.html">Papaloapan</a>
+        <a href="tuxtlas.html">Tuxtlas</a>
+        <a href="sotavento.html">Sotavento</a>
+    </nav>
+
+    <section>
+        <h2>Historia</h2>
+        <p>La civilización olmeca floreció entre los años 1200 y 400 a.C., siendo la primera gran cultura mesoamericana. Sus centros ceremoniales más importantes en Veracruz son **San Lorenzo Tenochtitlán** y **La Venta** (esta última en Tabasco). Los olmecas desarrollaron el juego de pelota, el calendario, la escritura temprana y la iconografía del jaguar, legado que influyó en mayas, zapotecas y aztecas.</p>
+
+        <h2>Ubicación Geográfica</h2>
+        <p>Se ubica en el sur del estado de Veracruz, en la planicie costera del Golfo. Incluye municipios como San Lorenzo, Texistepec, Oluta, Sayula de Alemán, Uxpanapa y parte de Coatzacoalcos. La región es plana, húmeda y cubierta por selvas tropicales, ríos y humedales.</p>
+
+        <h2>Cultura</h2>
+        <p>Aunque la civilización olmeca desapareció hace más de 2,000 años, su legado pervive en la cosmovisión, mitos y prácticas agrícolas de las comunidades actuales. Hoy, la región es habitada por pueblos popolucas, nahuas y mestizos que conservan tradiciones orales, rituales de siembra y artesanías con motivos ancestrales.</p>
+
+        <h2>Importancia</h2>
+        <p>La Región Olmeca es clave para la arqueología mundial. San Lorenzo alberga las **cabezas colosales** más antiguas (algunas con más de 3,000 años) y complejos hidráulicos avanzados. Además, es una zona de alta biodiversidad y riqueza agrícola (caña, plátano, maíz).</p>
+
+        <h2>Tradiciones</h2>
+        <p>Las comunidades celebran fiestas patronales con danzas que evocan al jaguar y al maíz. La elaboración de barro con diseños prehispánicos, la música de flauta y tambor, y los rituales de agradecimiento a la tierra son prácticas vivas. La oralidad transmite mitos sobre los “hombres-jaguar” y los dioses de la lluvia.</p>
+
+        <h2>Festividades Importantes</h2>
+        <p>La Fiesta de San Lorenzo (10 de agosto), la Feria del Maíz en Sayula, y las celebraciones del Día del Patrimonio Cultural (mayo) con recorridos arqueológicos. En comunidades indígenas, se realizan ceremonias agrícolas en los equinoccios.</p>
+
+        <h2>Comida Típica</h2>
+        <p>Platillos tradicionales incluyen el tamal de ceniza, mole de olla, pescado en hoja de plátano, y bebidas como el pozol y el atole de maíz nuevo. El uso del chile, el cacao y las hierbas silvestres refleja raíces milenarias.</p>
+
+        <h2>Flora</h2>
+        <p>La región posee selva tropical perennifolia, manglares y humedales. Es rica en ceiba (árbol sagrado), caoba, ramón, orquídeas y plantas medicinales como el chucum y el palo de culebra.</p>
+
+        <h2>Fauna</h2>
+        <p>Habitan el jaguar (símbolo olmeca), el mono aullador, el tapir, el tucán, la guacamaya roja, el cocodrilo de pantano y cientos de especies de peces y anfibios. Las aves migratorias utilizan los humedales como refugio invernal.</p>
+
+        <h2>Datos Interesantes</h2>
+        <p>Las cabezas colosales olmecas pesan hasta 20 toneladas y fueron talladas en basalto traído desde las montañas de los Tuxtlas, a más de 80 km de distancia. Los olmecas inventaron el concepto del “cero” en matemáticas. Además, el nombre “Olmeca” significa “habitante del país del hule”, por su uso del caucho para pelotas y rituales.</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería Cultural</h2>
+        <input type="file" id="fileInput" accept="image/*" multiple>
+        <div id="galleryContainer"></div>
+    </section>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const galleryContainer = document.getElementById('galleryContainer');
+
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            galleryContainer.innerHTML = '';
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+                    galleryContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+</body>
+</html>
